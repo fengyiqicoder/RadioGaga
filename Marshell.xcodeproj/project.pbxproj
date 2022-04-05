@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13127BE027F97EBF00C7E042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127BDF27F97EBF00C7E042 /* AppDelegate.swift */; };
-		13127BE227F97EBF00C7E042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127BE127F97EBF00C7E042 /* ViewController.swift */; };
+		13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127BE127F97EBF00C7E042 /* RadioVC.swift */; };
 		13127BE427F97EBF00C7E042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE327F97EBF00C7E042 /* Assets.xcassets */; };
 		13127BE727F97EBF00C7E042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE527F97EBF00C7E042 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,11 +16,12 @@
 /* Begin PBXFileReference section */
 		13127BDC27F97EBF00C7E042 /* Marshell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marshell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13127BDF27F97EBF00C7E042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13127BE127F97EBF00C7E042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13127BE127F97EBF00C7E042 /* RadioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
 		13127BE327F97EBF00C7E042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13127BE627F97EBF00C7E042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13127BE827F97EBF00C7E042 /* Marshell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marshell.entitlements; sourceTree = "<group>"; };
 		13127BF127F97F4200C7E042 /* RoadMap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RoadMap.md; sourceTree = "<group>"; };
+		13127C0827FC0B6400C7E042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +55,38 @@
 		13127BDE27F97EBF00C7E042 /* Marshell */ = {
 			isa = PBXGroup;
 			children = (
-				13127BDF27F97EBF00C7E042 /* AppDelegate.swift */,
-				13127BE127F97EBF00C7E042 /* ViewController.swift */,
-				13127BE327F97EBF00C7E042 /* Assets.xcassets */,
-				13127BE527F97EBF00C7E042 /* Main.storyboard */,
+				13127C0827FC0B6400C7E042 /* Info.plist */,
 				13127BE827F97EBF00C7E042 /* Marshell.entitlements */,
+				13127C0527FBFD0400C7E042 /* App */,
+				13127C0627FBFD1000C7E042 /* VC */,
+				13127C0727FBFD1800C7E042 /* Asset */,
 			);
 			path = Marshell;
+			sourceTree = "<group>";
+		};
+		13127C0527FBFD0400C7E042 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				13127BDF27F97EBF00C7E042 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		13127C0627FBFD1000C7E042 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				13127BE127F97EBF00C7E042 /* RadioVC.swift */,
+				13127BE527F97EBF00C7E042 /* Main.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		13127C0727FBFD1800C7E042 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				13127BE327F97EBF00C7E042 /* Assets.xcassets */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13127BE227F97EBF00C7E042 /* ViewController.swift in Sources */,
+				13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */,
 				13127BE027F97EBF00C7E042 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -258,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -279,6 +305,7 @@
 				DEVELOPMENT_TEAM = K2D6DE8NGJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Marshell/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -306,6 +333,7 @@
 				DEVELOPMENT_TEAM = K2D6DE8NGJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Marshell/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
