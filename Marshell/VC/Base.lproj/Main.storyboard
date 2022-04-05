@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -65,20 +67,128 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-103" y="11"/>
         </scene>
-        <!--View Controller-->
+        <!--RadioVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Marshell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RadioVC" id="XfG-lQ-9wD" customClass="RadioVC" customModule="Marshell" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="395" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-dR-yrm">
+                                <rect key="frame" x="0.0" y="48" width="395" height="222"/>
+                                <clipView key="contentView" id="31T-Vn-jOz">
+                                    <rect key="frame" x="1" y="1" width="393" height="220"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="bIC-YS-u2Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="hkq-IF-208">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y5n-dR-yrm" secondAttribute="height" multiplier="1920:1080" id="aOD-i6-RVK"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="gBM-YA-fu6">
+                                    <rect key="frame" x="1" y="185" width="368" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0ji-Bj-6Wb">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-bG-Opw">
+                                <rect key="frame" x="15" y="24" width="184" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="tLz-uB-dh6"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Title" id="1y4-f3-VT0">
+                                    <font key="font" textStyle="headline" name=".SFNS-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-wT-V5i">
+                                <rect key="frame" x="15" y="9" width="184" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="tT2-gY-wMR"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Weburl" id="vQs-KS-l2u">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-np-o5m">
+                                <rect key="frame" x="303" y="3" width="40" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gjg-HQ-RuV"/>
+                                    <constraint firstAttribute="width" constant="40" id="qG9-aW-hN1"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="xI7-Cy-wgb">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemMedium" size="12"/>
+                                    <imageReference key="image" image="arrowtriangle.down.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-as-raZ">
+                                <rect key="frame" x="343" y="3" width="40" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4Mu-IR-iby"/>
+                                    <constraint firstAttribute="width" constant="40" id="K9U-nh-YLq"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="DFU-Mx-C6T">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemMedium" size="12"/>
+                                    <imageReference key="image" image="ellipsis.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-Cy-0KW">
+                                <rect key="frame" x="263" y="3" width="40" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="h6J-DG-ksw"/>
+                                    <constraint firstAttribute="width" constant="40" id="pUe-ou-Itr"/>
+                                </constraints>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="p0K-7x-2Qt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemMedium" size="12"/>
+                                    <imageReference key="image" image="pin.circle.fill" catalog="system" symbolScale="large"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y5n-dR-yrm" secondAttribute="trailing" id="0HM-z0-chB"/>
+                            <constraint firstItem="PVe-np-o5m" firstAttribute="leading" secondItem="LfB-Cy-0KW" secondAttribute="trailing" id="2J3-2R-r8R"/>
+                            <constraint firstItem="c2T-bG-Opw" firstAttribute="top" secondItem="31T-Vn-jOz" secondAttribute="bottom" constant="9" id="Bnk-cN-afN"/>
+                            <constraint firstAttribute="bottom" secondItem="hLH-as-raZ" secondAttribute="bottom" constant="8" id="Yeg-Ux-12Q"/>
+                            <constraint firstItem="zWF-wT-V5i" firstAttribute="top" secondItem="c2T-bG-Opw" secondAttribute="bottom" constant="2" id="ZZe-KY-zlL"/>
+                            <constraint firstItem="zWF-wT-V5i" firstAttribute="leading" secondItem="c2T-bG-Opw" secondAttribute="leading" id="Zbr-np-UlQ"/>
+                            <constraint firstItem="c2T-bG-Opw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="17" id="eR3-7y-3tU"/>
+                            <constraint firstItem="y5n-dR-yrm" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gSG-Aq-3vq"/>
+                            <constraint firstItem="hLH-as-raZ" firstAttribute="leading" secondItem="PVe-np-o5m" secondAttribute="trailing" id="oJ7-BT-DUy"/>
+                            <constraint firstItem="PVe-np-o5m" firstAttribute="centerY" secondItem="hLH-as-raZ" secondAttribute="centerY" id="sJM-FO-R83"/>
+                            <constraint firstItem="y5n-dR-yrm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="uI8-BJ-8ft"/>
+                            <constraint firstItem="LfB-Cy-0KW" firstAttribute="centerY" secondItem="PVe-np-o5m" secondAttribute="centerY" id="uKI-NY-pOu"/>
+                            <constraint firstAttribute="trailing" secondItem="hLH-as-raZ" secondAttribute="trailing" constant="12" id="xL5-uM-01z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="40.5" y="309"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrowtriangle.down.circle.fill" catalog="system" width="20" height="20"/>
+        <image name="ellipsis.circle.fill" catalog="system" width="20" height="20"/>
+        <image name="pin.circle.fill" catalog="system" width="20" height="20"/>
+    </resources>
 </document>
