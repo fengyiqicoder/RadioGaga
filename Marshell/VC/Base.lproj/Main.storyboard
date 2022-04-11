@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.WebKit2IBPlugin" version="19529"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,34 +78,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="395" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5n-dR-yrm">
-                                <rect key="frame" x="0.0" y="48" width="395" height="222"/>
-                                <clipView key="contentView" id="31T-Vn-jOz">
-                                    <rect key="frame" x="1" y="1" width="393" height="220"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <collectionView id="bIC-YS-u2Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="158"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="hkq-IF-208">
-                                                <size key="itemSize" width="50" height="50"/>
-                                            </collectionViewFlowLayout>
-                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </collectionView>
-                                    </subviews>
-                                </clipView>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="y5n-dR-yrm" secondAttribute="height" multiplier="1920:1080" id="aOD-i6-RVK"/>
-                                </constraints>
-                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="gBM-YA-fu6">
-                                    <rect key="frame" x="1" y="185" width="368" height="16"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0ji-Bj-6Wb">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-bG-Opw">
                                 <rect key="frame" x="15" y="24" width="184" height="16"/>
                                 <constraints>
@@ -138,6 +111,9 @@
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="arrowtriangle.down.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="changeRadioWithSender:" target="XfG-lQ-9wD" id="8Gk-hO-T5E"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-as-raZ">
                                 <rect key="frame" x="343" y="3" width="40" height="46"/>
@@ -150,6 +126,9 @@
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="ellipsis.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="moreWithSender:" target="XfG-lQ-9wD" id="QmR-WU-hV3"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-Cy-0KW">
                                 <rect key="frame" x="263" y="3" width="40" height="46"/>
@@ -162,24 +141,41 @@
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="pin.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="pinWithSender:" target="XfG-lQ-9wD" id="xra-dK-CuK"/>
+                                </connections>
                             </button>
+                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXQ-wU-p2l">
+                                <rect key="frame" x="0.0" y="48" width="395" height="222"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="y5n-dR-yrm" secondAttribute="trailing" id="0HM-z0-chB"/>
                             <constraint firstItem="PVe-np-o5m" firstAttribute="leading" secondItem="LfB-Cy-0KW" secondAttribute="trailing" id="2J3-2R-r8R"/>
-                            <constraint firstItem="c2T-bG-Opw" firstAttribute="top" secondItem="31T-Vn-jOz" secondAttribute="bottom" constant="9" id="Bnk-cN-afN"/>
+                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="2RN-TL-7Vt"/>
+                            <constraint firstItem="c2T-bG-Opw" firstAttribute="top" secondItem="QXQ-wU-p2l" secondAttribute="bottom" constant="8" symbolic="YES" id="8mv-V1-qpC"/>
+                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="0.822222" id="DNK-9m-fH6"/>
                             <constraint firstAttribute="bottom" secondItem="hLH-as-raZ" secondAttribute="bottom" constant="8" id="Yeg-Ux-12Q"/>
                             <constraint firstItem="zWF-wT-V5i" firstAttribute="top" secondItem="c2T-bG-Opw" secondAttribute="bottom" constant="2" id="ZZe-KY-zlL"/>
                             <constraint firstItem="zWF-wT-V5i" firstAttribute="leading" secondItem="c2T-bG-Opw" secondAttribute="leading" id="Zbr-np-UlQ"/>
                             <constraint firstItem="c2T-bG-Opw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="17" id="eR3-7y-3tU"/>
-                            <constraint firstItem="y5n-dR-yrm" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="gSG-Aq-3vq"/>
+                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lfW-td-HPv"/>
+                            <constraint firstAttribute="trailing" secondItem="QXQ-wU-p2l" secondAttribute="trailing" id="np4-67-dz9"/>
                             <constraint firstItem="hLH-as-raZ" firstAttribute="leading" secondItem="PVe-np-o5m" secondAttribute="trailing" id="oJ7-BT-DUy"/>
                             <constraint firstItem="PVe-np-o5m" firstAttribute="centerY" secondItem="hLH-as-raZ" secondAttribute="centerY" id="sJM-FO-R83"/>
-                            <constraint firstItem="y5n-dR-yrm" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="uI8-BJ-8ft"/>
                             <constraint firstItem="LfB-Cy-0KW" firstAttribute="centerY" secondItem="PVe-np-o5m" secondAttribute="centerY" id="uKI-NY-pOu"/>
                             <constraint firstAttribute="trailing" secondItem="hLH-as-raZ" secondAttribute="trailing" constant="12" id="xL5-uM-01z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pinButton" destination="LfB-Cy-0KW" id="VEN-PV-LBT"/>
+                        <outlet property="radioTitleLabel" destination="c2T-bG-Opw" id="YKF-lK-yCg"/>
+                        <outlet property="radioURLLabel" destination="zWF-wT-V5i" id="CsB-3s-nbr"/>
+                        <outlet property="radioWebView" destination="QXQ-wU-p2l" id="itw-lJ-Dvx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

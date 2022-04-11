@@ -11,6 +11,7 @@
 		13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127BE127F97EBF00C7E042 /* RadioVC.swift */; };
 		13127BE427F97EBF00C7E042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE327F97EBF00C7E042 /* Assets.xcassets */; };
 		13127BE727F97EBF00C7E042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE527F97EBF00C7E042 /* Main.storyboard */; };
+		13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		13127BE827F97EBF00C7E042 /* Marshell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marshell.entitlements; sourceTree = "<group>"; };
 		13127BF127F97F4200C7E042 /* RoadMap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RoadMap.md; sourceTree = "<group>"; };
 		13127C0827FC0B6400C7E042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				13127BE827F97EBF00C7E042 /* Marshell.entitlements */,
 				13127C0527FBFD0400C7E042 /* App */,
 				13127C0627FBFD1000C7E042 /* VC */,
+				13127C0B27FC9F0B00C7E042 /* Views */,
 				13127C0727FBFD1800C7E042 /* Asset */,
 			);
 			path = Marshell;
@@ -87,6 +90,14 @@
 				13127BE327F97EBF00C7E042 /* Assets.xcassets */,
 			);
 			path = Asset;
+			sourceTree = "<group>";
+		};
+		13127C0B27FC9F0B00C7E042 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 			files = (
 				13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */,
 				13127BE027F97EBF00C7E042 /* AppDelegate.swift in Sources */,
+				13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
