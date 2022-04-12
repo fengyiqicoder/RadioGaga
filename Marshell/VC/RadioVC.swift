@@ -78,7 +78,7 @@ class RadioVC: NSViewController {
     
     @objc
     func edit() {
-        
+        EditorWindowController.show(source: currentPlaying)
     }
     
     @objc
@@ -89,7 +89,7 @@ class RadioVC: NSViewController {
     
     @objc
     func addNewRadio() {
-        
+        EditorWindowController.show(source: nil)
     }
     
     @objc

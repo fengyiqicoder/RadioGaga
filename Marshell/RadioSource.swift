@@ -22,6 +22,10 @@ struct RadioSource: Codable {
         RadioSource(url: "https://www.youtube.com/embed/DWcJFNfaw9c", title: "Lofi on Bed"),
         RadioSource(url: "https://www.youtube.com/embed/_fVjJmX2GYs", title: "Rick and Morty"),
     ]
+    
+    static var zero: RadioSource {
+        RadioSource(url: "", title: "")
+    }
 }
 
 class RadioSourceController {
