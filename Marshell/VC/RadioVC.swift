@@ -66,10 +66,36 @@ class RadioVC: NSViewController {
     }
     
     @IBAction func more(sender: NSButton) {
+        let menu = NSMenu()
+        
+        menu.addItem(withTitle: "Edit Radio Source", action: #selector(edit), keyEquivalent: "")
+        menu.addItem(withTitle: "Open in Browser", action: #selector(openInBrowser), keyEquivalent: "")
+        menu.addItem(withTitle: "Add New Source", action: #selector(addNewRadio), keyEquivalent: "")
+        menu.addItem(withTitle: "Quit App", action: #selector(quitApp), keyEquivalent: "")
+        
+        menu.popUp(positioning: nil, at: sender.frame.center, in: sender.superview)
+    }
+    
+    @objc
+    func edit() {
         
     }
     
+    @objc
+    func openInBrowser() {
+        guard let url = URL(string: currentPlaying.url) else { return }
+        NSWorkspace.shared.open(url)
+    }
     
+    @objc
+    func addNewRadio() {
+        
+    }
+    
+    @objc
+    func quitApp() {
+        NSApp.terminate(nil)
+    }
     func createNextWebView(source: RadioSource) -> WKWebView? {
         
         guard let url = URL(string: source.url) else {
@@ -132,5 +158,11 @@ fileprivate extension WKWebView {
     func load(resource: RadioSource) {
         guard let url = URL(string: resource.url) else { return }
         load(URLRequest(url: url))
+    }
+}
+
+extension CGRect {
+    var center: CGPoint {
+        CGPoint(x: midX, y: midY)
     }
 }
