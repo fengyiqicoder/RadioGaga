@@ -7,7 +7,9 @@
 
 import Cocoa
 import WebKit
+import SnapKit
 
+//Can't resize
 class RadioVC: NSViewController {
     
     static let shared = RadioVC.instanceFromStoryboard()
@@ -18,15 +20,33 @@ class RadioVC: NSViewController {
     }
     
     //MARK: - Views outlet
-    @IBOutlet weak var radioWebView: WKWebView!
+    @IBOutlet weak var radioView: NSBox!
     @IBOutlet weak var radioTitleLabel: NSTextField!
     @IBOutlet weak var radioURLLabel: NSTextField!
     
+    var currentWebview: WKWebView?
+    var nextWebview: WKWebView?
+    
+    var model: [RadioSource] {
+        RadioSourceController.shared.list
+    }
+    var currentPlaying: RadioSource = RadioSourceController.shared.list.first!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        radioWebView.load(URLRequest(url: URL(string: "https://www.youtube.com/embed/oVi5gtzTDx0")!))
-
-    
+        
+        let webview = WKWebView()
+        self.view.addSubview(webview)
+        webview.frame = radioView.frame
+        webview.load(resource: currentPlaying)
+        
+        radioTitleLabel.stringValue = currentPlaying.title
+        radioURLLabel.stringValue = webview.url?.absoluteString ?? ""
+        
+        currentWebview = webview
+        
+        let nextOrder = (1) % (model.count-1)
+        nextWebview = createNextWebView(source: model[nextOrder])
     }
     
     @IBOutlet weak var pinButton: NSButton!
@@ -35,11 +55,61 @@ class RadioVC: NSViewController {
     }
 
     @IBAction func changeRadio(sender: NSButton) {
+        guard let currentOrder = model.firstIndex(where: { $0.uuid == currentPlaying.uuid }) else { return }
         
+        let nextOrder = (currentOrder + 1) % (model.count-1)
+        let nextNextOrder = (nextOrder + 1) % (model.count-1)
+        
+        currentPlaying = model[nextOrder]
+        load(source: model[nextOrder])
+        nextWebview = createNextWebView(source: model[nextNextOrder])
     }
     
     @IBAction func more(sender: NSButton) {
         
+    }
+    
+    
+    func createNextWebView(source: RadioSource) -> WKWebView? {
+        
+        guard let url = URL(string: source.url) else {
+            return nil
+        }
+        
+        let newWebView = WKWebView()
+        newWebView.load(URLRequest(url: url))
+        self.view.addSubview(newWebView)
+        
+        newWebView.frame = radioView.frame
+        let radioViewSize = radioView.frame.width
+        newWebView.frame.origin.x += radioViewSize
+        
+        return newWebView
+    }
+    
+    func load(source: RadioSource) {
+        
+        guard let oldWebview = currentWebview else {
+            print("报错-没有 old webview")
+            return
+        }
+        
+        radioTitleLabel.stringValue = source.title
+        radioURLLabel.stringValue = source.url
+    
+        let newWebView = nextWebview ?? createNextWebView(source: source)
+        let radioViewSize = radioView.frame.width
+
+        NSAnimationContext.runAnimationGroup { context in
+            context.duration = 0.4
+            
+            newWebView?.animator().frame = radioView.frame
+            oldWebview.animator().frame.origin.x -= radioViewSize
+        } completionHandler: {
+            oldWebview.removeFromSuperview()
+        }
+
+        currentWebview = newWebView
     }
 }
 
@@ -55,4 +125,12 @@ extension RadioVC: NSCollectionViewDataSource, NSCollectionViewDelegate {
     }
     
     
+}
+
+
+fileprivate extension WKWebView {
+    func load(resource: RadioSource) {
+        guard let url = URL(string: resource.url) else { return }
+        load(URLRequest(url: url))
+    }
 }

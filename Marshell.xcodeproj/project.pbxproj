@@ -12,6 +12,8 @@
 		13127BE427F97EBF00C7E042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE327F97EBF00C7E042 /* Assets.xcassets */; };
 		13127BE727F97EBF00C7E042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13127BE527F97EBF00C7E042 /* Main.storyboard */; };
 		13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */; };
+		13EA1FBB28050F4400C32F5E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13EA1FBA28050F4400C32F5E /* SnapKit */; };
+		13EA1FBD2805102000C32F5E /* RadioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA1FBC2805102000C32F5E /* RadioSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		13127BF127F97F4200C7E042 /* RoadMap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RoadMap.md; sourceTree = "<group>"; };
 		13127C0827FC0B6400C7E042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCollectionView.swift; sourceTree = "<group>"; };
+		13EA1FBC2805102000C32F5E /* RadioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13EA1FBB28050F4400C32F5E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				13127C0827FC0B6400C7E042 /* Info.plist */,
+				13EA1FBC2805102000C32F5E /* RadioSource.swift */,
 				13127BE827F97EBF00C7E042 /* Marshell.entitlements */,
 				13127C0527FBFD0400C7E042 /* App */,
 				13127C0627FBFD1000C7E042 /* VC */,
@@ -116,6 +121,9 @@
 			dependencies = (
 			);
 			name = Marshell;
+			packageProductDependencies = (
+				13EA1FBA28050F4400C32F5E /* SnapKit */,
+			);
 			productName = Marshell;
 			productReference = 13127BDC27F97EBF00C7E042 /* Marshell.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 13127BD327F97EBF00C7E042;
+			packageReferences = (
+				13EA1FB928050F4400C32F5E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 13127BDD27F97EBF00C7E042 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13EA1FBD2805102000C32F5E /* RadioSource.swift in Sources */,
 				13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */,
 				13127BE027F97EBF00C7E042 /* AppDelegate.swift in Sources */,
 				13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */,
@@ -387,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13EA1FB928050F4400C32F5E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13EA1FBA28050F4400C32F5E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13EA1FB928050F4400C32F5E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13127BD427F97EBF00C7E042 /* Project object */;
 }

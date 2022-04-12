@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
-        <plugIn identifier="com.apple.WebKit2IBPlugin" version="19529"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,7 +108,7 @@
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="xI7-Cy-wgb">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemMedium" size="12"/>
-                                    <imageReference key="image" image="arrowtriangle.down.circle.fill" catalog="system" symbolScale="large"/>
+                                    <imageReference key="image" image="chevron.right.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="changeRadioWithSender:" target="XfG-lQ-9wD" id="8Gk-hO-T5E"/>
@@ -145,25 +144,27 @@
                                     <action selector="pinWithSender:" target="XfG-lQ-9wD" id="xra-dK-CuK"/>
                                 </connections>
                             </button>
-                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXQ-wU-p2l">
+                            <box boxType="custom" borderType="none" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="sHw-QK-1HY">
                                 <rect key="frame" x="0.0" y="48" width="395" height="222"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <view key="contentView" id="jeN-rh-dlP">
+                                    <rect key="frame" x="0.0" y="0.0" width="395" height="222"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="Oyd-Ue-lo3"/>
+                                </constraints>
+                            </box>
                         </subviews>
                         <constraints>
                             <constraint firstItem="PVe-np-o5m" firstAttribute="leading" secondItem="LfB-Cy-0KW" secondAttribute="trailing" id="2J3-2R-r8R"/>
-                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="2RN-TL-7Vt"/>
-                            <constraint firstItem="c2T-bG-Opw" firstAttribute="top" secondItem="QXQ-wU-p2l" secondAttribute="bottom" constant="8" symbolic="YES" id="8mv-V1-qpC"/>
-                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" multiplier="0.822222" id="DNK-9m-fH6"/>
+                            <constraint firstItem="sHw-QK-1HY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="LwM-AM-l8u"/>
+                            <constraint firstAttribute="trailing" secondItem="sHw-QK-1HY" secondAttribute="trailing" id="UiM-1y-lZS"/>
+                            <constraint firstAttribute="bottom" secondItem="zWF-wT-V5i" secondAttribute="bottom" constant="9" id="Uzq-um-lNO"/>
+                            <constraint firstItem="sHw-QK-1HY" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="Y7H-B6-bLs"/>
                             <constraint firstAttribute="bottom" secondItem="hLH-as-raZ" secondAttribute="bottom" constant="8" id="Yeg-Ux-12Q"/>
                             <constraint firstItem="zWF-wT-V5i" firstAttribute="top" secondItem="c2T-bG-Opw" secondAttribute="bottom" constant="2" id="ZZe-KY-zlL"/>
                             <constraint firstItem="zWF-wT-V5i" firstAttribute="leading" secondItem="c2T-bG-Opw" secondAttribute="leading" id="Zbr-np-UlQ"/>
                             <constraint firstItem="c2T-bG-Opw" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="17" id="eR3-7y-3tU"/>
-                            <constraint firstItem="QXQ-wU-p2l" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="lfW-td-HPv"/>
-                            <constraint firstAttribute="trailing" secondItem="QXQ-wU-p2l" secondAttribute="trailing" id="np4-67-dz9"/>
                             <constraint firstItem="hLH-as-raZ" firstAttribute="leading" secondItem="PVe-np-o5m" secondAttribute="trailing" id="oJ7-BT-DUy"/>
                             <constraint firstItem="PVe-np-o5m" firstAttribute="centerY" secondItem="hLH-as-raZ" secondAttribute="centerY" id="sJM-FO-R83"/>
                             <constraint firstItem="LfB-Cy-0KW" firstAttribute="centerY" secondItem="PVe-np-o5m" secondAttribute="centerY" id="uKI-NY-pOu"/>
@@ -174,7 +175,7 @@
                         <outlet property="pinButton" destination="LfB-Cy-0KW" id="VEN-PV-LBT"/>
                         <outlet property="radioTitleLabel" destination="c2T-bG-Opw" id="YKF-lK-yCg"/>
                         <outlet property="radioURLLabel" destination="zWF-wT-V5i" id="CsB-3s-nbr"/>
-                        <outlet property="radioWebView" destination="QXQ-wU-p2l" id="itw-lJ-Dvx"/>
+                        <outlet property="radioView" destination="sHw-QK-1HY" id="JZp-r4-DTP"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +184,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrowtriangle.down.circle.fill" catalog="system" width="20" height="20"/>
+        <image name="chevron.right.circle.fill" catalog="system" width="20" height="20"/>
         <image name="ellipsis.circle.fill" catalog="system" width="20" height="20"/>
         <image name="pin.circle.fill" catalog="system" width="20" height="20"/>
     </resources>
