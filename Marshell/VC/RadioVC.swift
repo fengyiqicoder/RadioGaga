@@ -67,10 +67,11 @@ class RadioVC: NSViewController {
     
     @IBAction func more(sender: NSButton) {
         let menu = NSMenu()
-        
-        menu.addItem(withTitle: "Edit Radio Source", action: #selector(edit), keyEquivalent: "")
-        menu.addItem(withTitle: "Open in Browser", action: #selector(openInBrowser), keyEquivalent: "")
         menu.addItem(withTitle: "Add New Source", action: #selector(addNewRadio), keyEquivalent: "")
+        menu.addItem(withTitle: "Edit This Source", action: #selector(edit), keyEquivalent: "")
+        
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(withTitle: "Open in Browser", action: #selector(openInBrowser), keyEquivalent: "")
         menu.addItem(withTitle: "Quit App", action: #selector(quitApp), keyEquivalent: "")
         
         menu.popUp(positioning: nil, at: sender.frame.center, in: sender.superview)

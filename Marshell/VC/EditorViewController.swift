@@ -15,15 +15,17 @@ class EditorViewController: NSViewController {
     @IBOutlet var doneButton: NSButton!
     @IBOutlet var deleteButton: NSButton!
     
-    var currentSource: RadioSource? {
+    private var currentUUID: String!
+    private var currentSource: RadioSource? {
         didSet {
-            
+            titleTextField.stringValue = currentSource?.title ?? ""
+            urlTextField.stringValue = currentSource?.url ?? ""
         }
     }
     
-    func load(source: RadioSource) {
-        titleTextField.stringValue = source.title
-        urlTextField.stringValue = source.url
+    func load(source: RadioSource?) {
+        deleteButton.isHidden = source == nil
+        currentSource = source
     }
     
     override func viewDidLoad() {

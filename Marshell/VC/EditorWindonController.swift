@@ -18,8 +18,9 @@ class EditorWindowController: NSWindowController {
         let vc = window.contentViewController as? EditorViewController
         window.setFrame(CGRect(x: 0, y: 0, width: 343, height: 242), display: true)
         window.center()
+        window.title = source == nil ? "Add New Source" : "Editor Source"
         
-        vc?.load(source: source ?? .zero)
+        vc?.load(source: source)
         
         editorWindowController.showWindow(window)
         
