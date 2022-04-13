@@ -36,6 +36,7 @@ class RadioVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //手动初始化第一个电台
         let webview = WKWebView()
         self.view.addSubview(webview)
@@ -49,12 +50,46 @@ class RadioVC: NSViewController {
         
         let nextOrder = (1) % (model.count-1)
         nextWebview = createNextWebView(source: model[nextOrder])
+        
     }
     
     //MARK: Interface
     
     @IBOutlet weak var pinButton: NSButton!
+    
+    private var pinnedWindow: NSWindow?
     @IBAction func pin(sender: NSButton) {
+        guard let appDelegate = (NSApp.delegate as? AppDelegate) else { return }
+        guard let statusBarButton = appDelegate.statusBarButton else { return }
+        
+        if pinnedWindow == nil {
+            
+            let windowController = NSWindowController(window: NSWindow(contentViewController: RadioVC.shared))
+            
+            let window = windowController.window
+            window?.styleMask = [.titled, .fullSizeContentView]
+            window?.titlebarAppearsTransparent = true
+            window?.titleVisibility = .hidden
+            
+            window?.isMovableByWindowBackground = true
+            window?.setFrame(NSRect(x: 0, y: 0, width: 395, height: 270), display: false)
+            window?.center()
+            
+            windowController.showWindow(windowController.window)
+            pinnedWindow = window
+            
+            statusBarButton.disablePopover = true
+            pinButton.image = NSImage(systemSymbolName: "pin.circle", accessibilityDescription: nil)?.withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 17, weight: .medium))
+        } else {
+            appDelegate.updateStatusBarPopover()
+            pinnedWindow?.close()
+            pinnedWindow = nil
+            
+            statusBarButton.disablePopover = false
+            pinButton.image = NSImage(systemSymbolName: "pin.circle.fill", accessibilityDescription: nil)?.withSymbolConfiguration(NSImage.SymbolConfiguration(pointSize: 17, weight: .medium))
+
+        }
+        
         
     }
 

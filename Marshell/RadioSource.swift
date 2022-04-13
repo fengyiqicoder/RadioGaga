@@ -15,6 +15,7 @@ struct RadioSource: Codable {
     static let defualt: [RadioSource] =
     [
         RadioSource(url: "https://www.youtube.com/embed/oVi5gtzTDx0", title: "Nice Guy"),
+        RadioSource(url: "https://lofi.cafe", title: "Lofi Cafe"),
         RadioSource(url: "https://www.youtube.com/embed/DrmcAh2FRHQ", title: "Jazz Bar"),
         RadioSource(url: "https://www.youtube.com/embed/5qap5aO4i9A", title: "Lofi HipHop"),
         RadioSource(url: "https://www.youtube.com/embed/9UMxZofMNbA", title: "Chill Out"),
@@ -42,10 +43,10 @@ class RadioSourceController {
 
             let data = (UserDefaults.standard.object(forKey: "RadioSourceController.list") as? Data) ?? Data()
             let resource = try? JSONDecoder().decode([RadioSource].self, from: data)
-            print("@____________________")
-            resource?.forEach({ source in
-                print("@", source.uuid, source.title, source.url)
-            })
+//            print("@____________________")
+//            resource?.forEach({ source in
+//                print("@", source.uuid, source.title, source.url)
+//            })
             return resource ?? RadioSource.defualt
         }
     }

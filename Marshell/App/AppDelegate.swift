@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        updateStatusBar()
+        initStatusBar()
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
@@ -20,14 +20,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     //MARK: - statusBar Item
-    private var statusBarButton: StatusBarController?
+    var statusBarButton: StatusBarController?
 
     var statusItem: NSStatusItem?
 
     
-    func updateStatusBar() {
+    fileprivate
+    func initStatusBar() {
         
-        statusBarButton?.show()
         if statusBarButton != nil { return }
         
         //Genarete suatus item
@@ -42,7 +42,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.contentViewController = RadioVC.shared
         
         statusBarButton = StatusBarController(popover, item: statusItem!)
-        
+        statusBarButton?.show()
+    }
+    
+    func updateStatusBarPopover() {
+        //Make popover
+        let popover = NSPopover.init()
+        popover.behavior = .transient
+        popover.contentViewController = RadioVC.shared
+        statusBarButton?.popover = popover
     }
 }
 
@@ -50,7 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 class StatusBarController {
     var statusItem: NSStatusItem
     
-    private var popover: NSPopover
+    var popover: NSPopover
 
     func hide() {
         statusItem.isVisible = false
@@ -70,7 +78,9 @@ class StatusBarController {
         }
     }
 
+    var disablePopover: Bool = false
     @objc func togglePopover() {
+        guard !disablePopover else { return }
         if(popover.isShown) {
             hidePopover()
         }

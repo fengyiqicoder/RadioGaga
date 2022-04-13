@@ -14,12 +14,13 @@
 		13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */; };
 		1396D12B2805A98B00E803D7 /* EditorWindonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D12A2805A98B00E803D7 /* EditorWindonController.swift */; };
 		1396D12D2805A99500E803D7 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D12C2805A99500E803D7 /* EditorViewController.swift */; };
+		1396D130280699A600E803D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1396D132280699A600E803D7 /* InfoPlist.strings */; };
 		13EA1FBB28050F4400C32F5E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13EA1FBA28050F4400C32F5E /* SnapKit */; };
 		13EA1FBD2805102000C32F5E /* RadioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA1FBC2805102000C32F5E /* RadioSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13127BDC27F97EBF00C7E042 /* Marshell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marshell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13127BDC27F97EBF00C7E042 /* RadioGaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioGaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13127BDF27F97EBF00C7E042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13127BE127F97EBF00C7E042 /* RadioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
 		13127BE327F97EBF00C7E042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCollectionView.swift; sourceTree = "<group>"; };
 		1396D12A2805A98B00E803D7 /* EditorWindonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWindonController.swift; sourceTree = "<group>"; };
 		1396D12C2805A99500E803D7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
+		1396D131280699A600E803D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13EA1FBC2805102000C32F5E /* RadioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +59,7 @@
 		13127BDD27F97EBF00C7E042 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13127BDC27F97EBF00C7E042 /* Marshell.app */,
+				13127BDC27F97EBF00C7E042 /* RadioGaga.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				13127BE327F97EBF00C7E042 /* Assets.xcassets */,
+				1396D132280699A600E803D7 /* InfoPlist.strings */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -114,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13127BDB27F97EBF00C7E042 /* Marshell */ = {
+		13127BDB27F97EBF00C7E042 /* RadioGaga */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "Marshell" */;
+			buildConfigurationList = 13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "RadioGaga" */;
 			buildPhases = (
 				13127BD827F97EBF00C7E042 /* Sources */,
 				13127BD927F97EBF00C7E042 /* Frameworks */,
@@ -126,12 +129,12 @@
 			);
 			dependencies = (
 			);
-			name = Marshell;
+			name = RadioGaga;
 			packageProductDependencies = (
 				13EA1FBA28050F4400C32F5E /* SnapKit */,
 			);
 			productName = Marshell;
-			productReference = 13127BDC27F97EBF00C7E042 /* Marshell.app */;
+			productReference = 13127BDC27F97EBF00C7E042 /* RadioGaga.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +145,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					13127BDB27F97EBF00C7E042 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -165,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13127BDB27F97EBF00C7E042 /* Marshell */,
+				13127BDB27F97EBF00C7E042 /* RadioGaga */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13127BE427F97EBF00C7E042 /* Assets.xcassets in Resources */,
+				1396D130280699A600E803D7 /* InfoPlist.strings in Resources */,
 				13127BE727F97EBF00C7E042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +209,14 @@
 				13127BE627F97EBF00C7E042 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1396D132280699A600E803D7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1396D131280699A600E803D7 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -331,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Marshell/Marshell.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -361,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Marshell/Marshell.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -397,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "Marshell" */ = {
+		13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "RadioGaga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13127BEC27F97EBF00C7E042 /* Debug */,

@@ -13,9 +13,9 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Radio GaGa" id="1Xt-HY-uBw">
+                            <menuItem title="RadioGaga" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Radio GaGa" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="RadioGaga" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About Radio GaGa" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -37,7 +37,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Marshell" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="RadioGaga" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,7 +46,7 @@
         <!--RadioVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="RadioVC" id="XfG-lQ-9wD" customClass="RadioVC" customModule="Marshell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RadioVC" id="XfG-lQ-9wD" customClass="RadioVC" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="395" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -159,7 +159,7 @@
         <!--Window Controller-->
         <scene sceneID="hEA-bw-P20">
             <objects>
-                <windowController storyboardIdentifier="editorWindowController" id="eu3-ov-iay" customClass="EditorWindowController" customModule="Marshell" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="editorWindowController" id="eu3-ov-iay" customClass="EditorWindowController" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="K1O-ZP-685">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -184,7 +184,7 @@
         <!--Editor View Controller-->
         <scene sceneID="xZl-Sc-uzn">
             <objects>
-                <viewController id="WJk-3L-3TI" customClass="EditorViewController" customModule="Marshell" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WJk-3L-3TI" customClass="EditorViewController" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="8Bh-nv-XLj">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                         <autoresizingMask key="autoresizingMask"/>
