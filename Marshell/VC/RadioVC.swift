@@ -8,6 +8,7 @@
 import Cocoa
 import WebKit
 import SnapKit
+import MediaPlayer
 
 //Can't resize
 class RadioVC: NSViewController {
@@ -35,6 +36,7 @@ class RadioVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //手动初始化第一个电台
         let webview = WKWebView()
         self.view.addSubview(webview)
         webview.frame = radioView.frame
@@ -49,20 +51,20 @@ class RadioVC: NSViewController {
         nextWebview = createNextWebView(source: model[nextOrder])
     }
     
+    //MARK: Interface
+    
     @IBOutlet weak var pinButton: NSButton!
     @IBAction func pin(sender: NSButton) {
         
     }
 
+    
     @IBAction func changeRadio(sender: NSButton) {
-        guard let currentOrder = model.firstIndex(where: { $0.uuid == currentPlaying.uuid }) else { return }
+        guard let currentOrder = model.firstIndex(where: {
+            $0.uuid == currentPlaying.uuid
+        }) else { return }
         
-        let nextOrder = (currentOrder + 1) % (model.count-1)
-        let nextNextOrder = (nextOrder + 1) % (model.count-1)
-        
-        currentPlaying = model[nextOrder]
-        load(source: model[nextOrder])
-        nextWebview = createNextWebView(source: model[nextNextOrder])
+        turningRadioTo(currentOrder + 1)
     }
     
     @IBAction func more(sender: NSButton) {
@@ -77,6 +79,7 @@ class RadioVC: NSViewController {
         menu.popUp(positioning: nil, at: sender.frame.center, in: sender.superview)
     }
     
+    //Button Action
     @objc
     func edit() {
         EditorWindowController.show(source: currentPlaying)
@@ -97,6 +100,20 @@ class RadioVC: NSViewController {
     func quitApp() {
         NSApp.terminate(nil)
     }
+    
+    //MARK: - Change radio
+    
+    func turningRadioTo(_ nextOrder: Int, cache: Bool = true) {
+        
+        let nextOrder = nextOrder % model.count
+        let nextNextOrder = (nextOrder + 1) % model.count
+                
+        currentPlaying = model[nextOrder]
+        load(source: currentPlaying, cache: cache)
+        nextWebview = createNextWebView(source: model[nextNextOrder])
+    }
+    
+    fileprivate
     func createNextWebView(source: RadioSource) -> WKWebView? {
         
         guard let url = URL(string: source.url) else {
@@ -114,7 +131,8 @@ class RadioVC: NSViewController {
         return newWebView
     }
     
-    func load(source: RadioSource) {
+    fileprivate
+    func load(source: RadioSource, cache: Bool = true) {
         
         guard let oldWebview = currentWebview else {
             print("报错-没有 old webview")
@@ -123,10 +141,19 @@ class RadioVC: NSViewController {
         
         radioTitleLabel.stringValue = source.title
         radioURLLabel.stringValue = source.url
-    
-        let newWebView = nextWebview ?? createNextWebView(source: source)
+        
+        //选择是否使用之前生成的WebView
+        var newWebView: WKWebView?
+        if cache {
+            newWebView = nextWebview ?? createNextWebView(source: source)
+        } else {
+            newWebView = createNextWebView(source: source)
+        }
         let radioViewSize = radioView.frame.width
 
+        if #available(macOS 12.0, *) {
+            oldWebview.pauseAllMediaPlayback()
+        }
         NSAnimationContext.runAnimationGroup { context in
             context.duration = 0.4
             
@@ -155,7 +182,8 @@ extension RadioVC: NSCollectionViewDataSource, NSCollectionViewDelegate {
 }
 
 
-fileprivate extension WKWebView {
+fileprivate
+extension WKWebView {
     func load(resource: RadioSource) {
         guard let url = URL(string: resource.url) else { return }
         load(URLRequest(url: url))

@@ -38,8 +38,14 @@ class RadioSourceController {
             UserDefaults.standard.set(data, forKey: "RadioSourceController.list")
         }
         get {
+//            UserDefaults.standard.set(nil, forKey: "RadioSourceController.list")
+
             let data = (UserDefaults.standard.object(forKey: "RadioSourceController.list") as? Data) ?? Data()
             let resource = try? JSONDecoder().decode([RadioSource].self, from: data)
+            print("@____________________")
+            resource?.forEach({ source in
+                print("@", source.uuid, source.title, source.url)
+            })
             return resource ?? RadioSource.defualt
         }
     }
