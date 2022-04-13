@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13127BDB27F97EBF00C7E042"
-               BuildableName = "Marshell.app"
+               BuildableName = "RadioGaga.app"
                BlueprintName = "RadioGaga"
                ReferencedContainer = "container:Marshell.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13127BDB27F97EBF00C7E042"
-            BuildableName = "Marshell.app"
+            BuildableName = "RadioGaga.app"
             BlueprintName = "RadioGaga"
             ReferencedContainer = "container:Marshell.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13127BDB27F97EBF00C7E042"
-            BuildableName = "Marshell.app"
+            BuildableName = "RadioGaga.app"
             BlueprintName = "RadioGaga"
             ReferencedContainer = "container:Marshell.xcodeproj">
          </BuildableReference>
