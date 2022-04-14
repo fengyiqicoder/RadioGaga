@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         initStatusBar()
+        ReviewController.shared.checkForReviewRequest()
     }
 
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {

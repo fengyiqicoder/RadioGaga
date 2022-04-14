@@ -15,6 +15,7 @@
 		1396D12B2805A98B00E803D7 /* EditorWindonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D12A2805A98B00E803D7 /* EditorWindonController.swift */; };
 		1396D12D2805A99500E803D7 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D12C2805A99500E803D7 /* EditorViewController.swift */; };
 		1396D130280699A600E803D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1396D132280699A600E803D7 /* InfoPlist.strings */; };
+		1396D1372807CE1500E803D7 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D1362807CE1500E803D7 /* RequestController.swift */; };
 		13EA1FBB28050F4400C32F5E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13EA1FBA28050F4400C32F5E /* SnapKit */; };
 		13EA1FBD2805102000C32F5E /* RadioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA1FBC2805102000C32F5E /* RadioSource.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		1396D12A2805A98B00E803D7 /* EditorWindonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWindonController.swift; sourceTree = "<group>"; };
 		1396D12C2805A99500E803D7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		1396D131280699A600E803D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1396D1362807CE1500E803D7 /* RequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
 		13EA1FBC2805102000C32F5E /* RadioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				13127C0827FC0B6400C7E042 /* Info.plist */,
-				13EA1FBC2805102000C32F5E /* RadioSource.swift */,
+				1396D1382807CE1900E803D7 /* Tool */,
+				1396D1352807CDF900E803D7 /* Model */,
 				13127BE827F97EBF00C7E042 /* Marshell.entitlements */,
 				13127C0527FBFD0400C7E042 /* App */,
 				13127C0627FBFD1000C7E042 /* VC */,
@@ -112,6 +115,22 @@
 				13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1396D1352807CDF900E803D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13EA1FBC2805102000C32F5E /* RadioSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1396D1382807CE1900E803D7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				1396D1362807CE1500E803D7 /* RequestController.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +214,7 @@
 				1396D12D2805A99500E803D7 /* EditorViewController.swift in Sources */,
 				13127BE227F97EBF00C7E042 /* RadioVC.swift in Sources */,
 				13127BE027F97EBF00C7E042 /* AppDelegate.swift in Sources */,
+				1396D1372807CE1500E803D7 /* RequestController.swift in Sources */,
 				1396D12B2805A98B00E803D7 /* EditorWindonController.swift in Sources */,
 				13127C0A27FC9F0000C7E042 /* RadioCollectionView.swift in Sources */,
 			);
