@@ -108,6 +108,7 @@ class RadioVC: NSViewController {
         menu.addItem(withTitle: "Edit This Source", action: #selector(edit), keyEquivalent: "")
         
         menu.addItem(NSMenuItem.separator())
+        menu.addItem(withTitle: "Raload", action: #selector(reloadWebView), keyEquivalent: "")
         menu.addItem(withTitle: "Open in Browser", action: #selector(openInBrowser), keyEquivalent: "")
         menu.addItem(withTitle: "Quit App", action: #selector(quitApp), keyEquivalent: "")
         
@@ -115,6 +116,13 @@ class RadioVC: NSViewController {
     }
     
     //Button Action
+    @objc
+    func reloadWebView() {
+//        print("@ \(currentWebview?.url) \(nextWebview?.url)")
+        currentWebview?.reload()
+        nextWebview?.reload()
+    }
+    
     @objc
     func edit() {
         EditorWindowController.show(source: currentPlaying)
