@@ -16,6 +16,13 @@
 		1396D12D2805A99500E803D7 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D12C2805A99500E803D7 /* EditorViewController.swift */; };
 		1396D130280699A600E803D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1396D132280699A600E803D7 /* InfoPlist.strings */; };
 		1396D1372807CE1500E803D7 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1396D1362807CE1500E803D7 /* RequestController.swift */; };
+		13DDF2BC280D839700E8332A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDF2BB280D839700E8332A /* AppDelegate.swift */; };
+		13DDF2BE280D839700E8332A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDF2BD280D839700E8332A /* SceneDelegate.swift */; };
+		13DDF2C0280D839700E8332A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDF2BF280D839700E8332A /* ViewController.swift */; };
+		13DDF2C3280D839700E8332A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DDF2C1280D839700E8332A /* Main.storyboard */; };
+		13DDF2C5280D839800E8332A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13DDF2C4280D839800E8332A /* Assets.xcassets */; };
+		13DDF2C8280D839800E8332A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DDF2C6280D839800E8332A /* LaunchScreen.storyboard */; };
+		13DDF2CF280D88FB00E8332A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13DDF2CE280D88FB00E8332A /* SnapKit */; };
 		13EA1FBB28050F4400C32F5E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 13EA1FBA28050F4400C32F5E /* SnapKit */; };
 		13EA1FBD2805102000C32F5E /* RadioSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA1FBC2805102000C32F5E /* RadioSource.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +41,14 @@
 		1396D12C2805A99500E803D7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		1396D131280699A600E803D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1396D1362807CE1500E803D7 /* RequestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
+		13DDF2B9280D839700E8332A /* RadioGaga_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioGaga_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DDF2BB280D839700E8332A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13DDF2BD280D839700E8332A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		13DDF2BF280D839700E8332A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13DDF2C2280D839700E8332A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13DDF2C4280D839800E8332A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13DDF2C7280D839800E8332A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13DDF2C9280D839800E8332A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13EA1FBC2805102000C32F5E /* RadioSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +61,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13DDF2B6280D839700E8332A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDF2CF280D88FB00E8332A /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,7 +77,9 @@
 			children = (
 				13127BF127F97F4200C7E042 /* RoadMap.md */,
 				13127BDE27F97EBF00C7E042 /* Marshell */,
+				13DDF2BA280D839700E8332A /* RadioGaga_iOS */,
 				13127BDD27F97EBF00C7E042 /* Products */,
+				13DDF2CD280D88FB00E8332A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				13127BDC27F97EBF00C7E042 /* RadioGaga.app */,
+				13DDF2B9280D839700E8332A /* RadioGaga_iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +159,27 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		13DDF2BA280D839700E8332A /* RadioGaga_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				13DDF2BB280D839700E8332A /* AppDelegate.swift */,
+				13DDF2BD280D839700E8332A /* SceneDelegate.swift */,
+				13DDF2BF280D839700E8332A /* ViewController.swift */,
+				13DDF2C1280D839700E8332A /* Main.storyboard */,
+				13DDF2C4280D839800E8332A /* Assets.xcassets */,
+				13DDF2C6280D839800E8332A /* LaunchScreen.storyboard */,
+				13DDF2C9280D839800E8332A /* Info.plist */,
+			);
+			path = RadioGaga_iOS;
+			sourceTree = "<group>";
+		};
+		13DDF2CD280D88FB00E8332A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +203,26 @@
 			productReference = 13127BDC27F97EBF00C7E042 /* RadioGaga.app */;
 			productType = "com.apple.product-type.application";
 		};
+		13DDF2B8280D839700E8332A /* RadioGaga_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DDF2CC280D839800E8332A /* Build configuration list for PBXNativeTarget "RadioGaga_iOS" */;
+			buildPhases = (
+				13DDF2B5280D839700E8332A /* Sources */,
+				13DDF2B6280D839700E8332A /* Frameworks */,
+				13DDF2B7280D839700E8332A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RadioGaga_iOS;
+			packageProductDependencies = (
+				13DDF2CE280D88FB00E8332A /* SnapKit */,
+			);
+			productName = RadioGaga_iOS;
+			productReference = 13DDF2B9280D839700E8332A /* RadioGaga_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,11 +230,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					13127BDB27F97EBF00C7E042 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					13DDF2B8280D839700E8332A = {
+						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
@@ -188,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				13127BDB27F97EBF00C7E042 /* RadioGaga */,
+				13DDF2B8280D839700E8332A /* RadioGaga_iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +271,16 @@
 				13127BE427F97EBF00C7E042 /* Assets.xcassets in Resources */,
 				1396D130280699A600E803D7 /* InfoPlist.strings in Resources */,
 				13127BE727F97EBF00C7E042 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13DDF2B7280D839700E8332A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDF2C8280D839800E8332A /* LaunchScreen.storyboard in Resources */,
+				13DDF2C5280D839800E8332A /* Assets.xcassets in Resources */,
+				13DDF2C3280D839700E8332A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +301,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13DDF2B5280D839700E8332A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDF2C0280D839700E8332A /* ViewController.swift in Sources */,
+				13DDF2BC280D839700E8332A /* AppDelegate.swift in Sources */,
+				13DDF2BE280D839700E8332A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -237,6 +328,22 @@
 				1396D131280699A600E803D7 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		13DDF2C1280D839700E8332A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13DDF2C2280D839700E8332A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13DDF2C6280D839800E8332A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13DDF2C7280D839800E8332A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -419,6 +526,73 @@
 			};
 			name = Release;
 		};
+		13DDF2CA280D839800E8332A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2D6DE8NGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RadioGaga_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RadioGaga;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "  ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13DDF2CB280D839800E8332A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K2D6DE8NGJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RadioGaga_iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = RadioGaga;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "  ";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -440,6 +614,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		13DDF2CC280D839800E8332A /* Build configuration list for PBXNativeTarget "RadioGaga_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DDF2CA280D839800E8332A /* Debug */,
+				13DDF2CB280D839800E8332A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -454,6 +637,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		13DDF2CE280D88FB00E8332A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13EA1FB928050F4400C32F5E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		13EA1FBA28050F4400C32F5E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 13EA1FB928050F4400C32F5E /* XCRemoteSwiftPackageReference "SnapKit" */;
