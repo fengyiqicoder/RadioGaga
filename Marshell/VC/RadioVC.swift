@@ -108,7 +108,7 @@ class RadioVC: NSViewController {
         menu.addItem(withTitle: "Edit This Source", action: #selector(edit), keyEquivalent: "")
         
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "Raload", action: #selector(reloadWebView), keyEquivalent: "")
+        menu.addItem(withTitle: "Reload", action: #selector(reloadWebView), keyEquivalent: "")
         menu.addItem(withTitle: "Open in Browser", action: #selector(openInBrowser), keyEquivalent: "")
         menu.addItem(withTitle: "Quit App", action: #selector(quitApp), keyEquivalent: "")
         
