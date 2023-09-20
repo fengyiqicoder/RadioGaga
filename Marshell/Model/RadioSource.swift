@@ -14,7 +14,7 @@ struct RadioSource: Codable {
     
     static let defualt: [RadioSource] =
     [
-        RadioSource(url: "https://www.youtube.com/embed/oVi5gtzTDx0", title: "Nice Guy"),
+        RadioSource(url: "https://www.youtube.com/embed/rs9EPxiLz3o", title: "Nice Guy"),
 //        RadioSource(url: "https://lofi.cafe", title: "Lofi Cafe"),
         RadioSource(url: "https://www.youtube.com/embed/6uddGul0oAc", title: "Jazz Bar"),
         RadioSource(url: "https://www.youtube.com/embed/5qap5aO4i9A", title: "Lofi HipHop"),
