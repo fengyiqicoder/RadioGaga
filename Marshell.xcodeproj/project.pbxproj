@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13127BDC27F97EBF00C7E042 /* RadioGaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioGaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13127BDC27F97EBF00C7E042 /* MusicBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13127BDF27F97EBF00C7E042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13127BE127F97EBF00C7E042 /* RadioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioVC.swift; sourceTree = "<group>"; };
 		13127BE327F97EBF00C7E042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		13127BDD27F97EBF00C7E042 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13127BDC27F97EBF00C7E042 /* RadioGaga.app */,
+				13127BDC27F97EBF00C7E042 /* MusicBar.app */,
 				13DDF2B9280D839700E8332A /* RadioGaga_iOS.app */,
 			);
 			name = Products;
@@ -183,9 +183,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13127BDB27F97EBF00C7E042 /* RadioGaga */ = {
+		13127BDB27F97EBF00C7E042 /* MusicBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "RadioGaga" */;
+			buildConfigurationList = 13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "MusicBar" */;
 			buildPhases = (
 				13127BD827F97EBF00C7E042 /* Sources */,
 				13127BD927F97EBF00C7E042 /* Frameworks */,
@@ -195,12 +195,12 @@
 			);
 			dependencies = (
 			);
-			name = RadioGaga;
+			name = MusicBar;
 			packageProductDependencies = (
 				13EA1FBA28050F4400C32F5E /* SnapKit */,
 			);
 			productName = Marshell;
-			productReference = 13127BDC27F97EBF00C7E042 /* RadioGaga.app */;
+			productReference = 13127BDC27F97EBF00C7E042 /* MusicBar.app */;
 			productType = "com.apple.product-type.application";
 		};
 		13DDF2B8280D839700E8332A /* RadioGaga_iOS */ = {
@@ -257,7 +257,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13127BDB27F97EBF00C7E042 /* RadioGaga */,
+				13127BDB27F97EBF00C7E042 /* MusicBar */,
 				13DDF2B8280D839700E8332A /* RadioGaga_iOS */,
 			);
 		};
@@ -473,11 +473,12 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = K2D6DE8NGJ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = JXZHF939CJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marshell/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicBar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -487,7 +488,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -504,11 +505,12 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = K2D6DE8NGJ;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = JXZHF939CJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marshell/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MusicBar;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
@@ -518,7 +520,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -605,7 +607,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "RadioGaga" */ = {
+		13127BEB27F97EBF00C7E042 /* Build configuration list for PBXNativeTarget "MusicBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13127BEC27F97EBF00C7E042 /* Debug */,

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,17 +13,17 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="RadioGaga" id="1Xt-HY-uBw">
+                            <menuItem title="MusicBar" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="RadioGaga" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="MusicBar" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Radio GaGa" id="5kV-Vb-QxS">
+                                        <menuItem title="About MusicBar" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Quit Radio GaGa" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit MusicBar" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -37,7 +37,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="RadioGaga" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MusicBar" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,12 +46,12 @@
         <!--RadioVC-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController storyboardIdentifier="RadioVC" id="XfG-lQ-9wD" customClass="RadioVC" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RadioVC" id="XfG-lQ-9wD" customClass="RadioVC" customModule="MusicBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="395" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-bG-Opw">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c2T-bG-Opw">
                                 <rect key="frame" x="15" y="24" width="184" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="tLz-uB-dh6"/>
@@ -62,7 +62,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-wT-V5i">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zWF-wT-V5i">
                                 <rect key="frame" x="15" y="9" width="224" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="tT2-gY-wMR"/>
@@ -75,45 +75,45 @@
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PVe-np-o5m">
                                 <rect key="frame" x="303" y="3" width="40" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="gjg-HQ-RuV"/>
-                                    <constraint firstAttribute="width" constant="40" id="qG9-aW-hN1"/>
-                                </constraints>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="xI7-Cy-wgb">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="chevron.right.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="gjg-HQ-RuV"/>
+                                    <constraint firstAttribute="width" constant="40" id="qG9-aW-hN1"/>
+                                </constraints>
                                 <connections>
                                     <action selector="changeRadioWithSender:" target="XfG-lQ-9wD" id="8Gk-hO-T5E"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-as-raZ">
                                 <rect key="frame" x="343" y="3" width="40" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="4Mu-IR-iby"/>
-                                    <constraint firstAttribute="width" constant="40" id="K9U-nh-YLq"/>
-                                </constraints>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="DFU-Mx-C6T">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="ellipsis.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="4Mu-IR-iby"/>
+                                    <constraint firstAttribute="width" constant="40" id="K9U-nh-YLq"/>
+                                </constraints>
                                 <connections>
                                     <action selector="moreWithSender:" target="XfG-lQ-9wD" id="QmR-WU-hV3"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LfB-Cy-0KW">
                                 <rect key="frame" x="263" y="3" width="40" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="h6J-DG-ksw"/>
-                                    <constraint firstAttribute="width" constant="40" id="pUe-ou-Itr"/>
-                                </constraints>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" id="p0K-7x-2Qt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="systemMedium" size="12"/>
                                     <imageReference key="image" image="pin.circle.fill" catalog="system" symbolScale="large"/>
                                 </buttonCell>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="h6J-DG-ksw"/>
+                                    <constraint firstAttribute="width" constant="40" id="pUe-ou-Itr"/>
+                                </constraints>
                                 <connections>
                                     <action selector="pinWithSender:" target="XfG-lQ-9wD" id="xra-dK-CuK"/>
                                 </connections>
@@ -159,7 +159,7 @@
         <!--Window Controller-->
         <scene sceneID="hEA-bw-P20">
             <objects>
-                <windowController storyboardIdentifier="editorWindowController" id="eu3-ov-iay" customClass="EditorWindowController" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="editorWindowController" id="eu3-ov-iay" customClass="EditorWindowController" customModule="MusicBar" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="K1O-ZP-685">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -184,12 +184,12 @@
         <!--Editor View Controller-->
         <scene sceneID="xZl-Sc-uzn">
             <objects>
-                <viewController id="WJk-3L-3TI" customClass="EditorViewController" customModule="RadioGaga" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WJk-3L-3TI" customClass="EditorViewController" customModule="MusicBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="8Bh-nv-XLj">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="222"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-zw-JYn">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqP-zw-JYn">
                                 <rect key="frame" x="28" y="158" width="42" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Title  :" id="Z6Y-GP-8bT">
@@ -198,7 +198,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3r2-8r-ddy">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3r2-8r-ddy">
                                 <rect key="frame" x="29" y="101" width="56" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="URL  :" id="54b-I9-P1E">
@@ -207,7 +207,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0of-Pe-3q7">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0of-Pe-3q7">
                                 <rect key="frame" x="90" y="155" width="211" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Radio Name" bezelStyle="round" id="YQV-QT-UnC">
@@ -216,7 +216,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-zK-K7h">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4lJ-zK-K7h">
                                 <rect key="frame" x="90" y="96" width="211" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Steaming web url" bezelStyle="round" id="9kE-Cy-lyM">
