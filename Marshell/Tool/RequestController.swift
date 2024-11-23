@@ -21,7 +21,7 @@ class ReviewController {
 
     func checkForReviewRequest() {
         usedTime += 1
-        if usedTime == 15 || usedTime == 30 {
+        if usedTime == 1 || usedTime == 5 || usedTime == 10 {
             SKStoreReviewController.requestReview()
         }
     }
