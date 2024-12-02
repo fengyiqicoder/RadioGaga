@@ -35,7 +35,7 @@
 		13127BE627F97EBF00C7E042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13127BE827F97EBF00C7E042 /* Marshell.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marshell.entitlements; sourceTree = "<group>"; };
 		13127BF127F97F4200C7E042 /* RoadMap.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RoadMap.md; sourceTree = "<group>"; };
-		13127C0827FC0B6400C7E042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13127C0827FC0B6400C7E042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13127C0927FC9F0000C7E042 /* RadioCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioCollectionView.swift; sourceTree = "<group>"; };
 		1396D12A2805A98B00E803D7 /* EditorWindonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorWindonController.swift; sourceTree = "<group>"; };
 		1396D12C2805A99500E803D7 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 		13127BDE27F97EBF00C7E042 /* Marshell */ = {
 			isa = PBXGroup;
 			children = (
-				13127C0827FC0B6400C7E042 /* Info.plist */,
 				1396D1382807CE1900E803D7 /* Tool */,
 				1396D1352807CDF900E803D7 /* Model */,
 				13127BE827F97EBF00C7E042 /* Marshell.entitlements */,
@@ -103,6 +102,7 @@
 				13127C0627FBFD1000C7E042 /* VC */,
 				13127C0B27FC9F0B00C7E042 /* Views */,
 				13127C0727FBFD1800C7E042 /* Asset */,
+				13127C0827FC0B6400C7E042 /* Info.plist */,
 			);
 			path = Marshell;
 			sourceTree = "<group>";
@@ -479,7 +479,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marshell/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MusicBar;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -490,7 +490,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -513,7 +513,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Marshell/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = MusicBar;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -524,7 +524,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundsoftware.Marshell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
